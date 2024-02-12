@@ -14,6 +14,10 @@ namespace IMC.Model
 
         public DateTime GetDataResultado() => _dataResultado;
 
+        public void SetDataResultado(DateTime dataResultado)
+        {
+            _dataResultado = dataResultado;
+        }
 
         public void CalculoDoIMC(Pessoa pessoa)
         {
@@ -60,11 +64,6 @@ namespace IMC.Model
         {
             if (_valorIMC < 0)
                 throw new ArgumentException("Erro ao calcular o IMC");
-        }
-
-        public void SetDataResultado(DateTime dataResultado)
-        {
-            _dataResultado = dataResultado;
         }
     }
 }
