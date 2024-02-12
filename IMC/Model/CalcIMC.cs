@@ -19,7 +19,7 @@ namespace IMC.Model
             {
                 if (ValorIMC >= 0)
 
-                    if (ValorIMC >= 0 && ValorIMC <= 18.5)
+                    if (ValorIMC <= 18.5)
                     {
                         Status = ImcStatus.Magro;
                     }
