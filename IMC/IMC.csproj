@@ -8,10 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="assets\app.fig" />
-    <Content Include="assets\icon-no-bg.png" />
-    <Content Include="assets\icon.png" />
-    <Content Include="assets\texto-para-publicacao-nas-redes-sociais.txt" />
+    <Compile Remove="NovaPasta\**" />
+    <Content Remove="NovaPasta\**" />
+    <EmbeddedResource Remove="NovaPasta\**" />
+    <None Remove="NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Img\assets\app.fig" />
+    <Content Include="Img\assets\icon-no-bg.png" />
+    <Content Include="Img\assets\icon.png" />
+    <Content Include="Img\assets\texto-para-publicacao-nas-redes-sociais.txt" />
   </ItemGroup>
 
   <ItemGroup>

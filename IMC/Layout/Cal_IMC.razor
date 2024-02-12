@@ -8,13 +8,13 @@
             <h1>Cálculo de IMC</h1>
         </div>
         <div class="flex flex-column">
-            <div><input class="input-text" type="text" placeholder="Altura" @bind-value="pessoa.Altura" /></div>
-            <div><input class="input-text" type="text" placeholder="Peso" @bind-value="pessoa.Peso" /></div>
+            <div><input class="input-text" type="number" placeholder="Altura" @bind-value="pessoa.Altura" /></div>
+            <div><input class="input-text" type="number" placeholder="Peso" @bind-value="pessoa.Peso" /></div>
             <div><input class="input-text" type="text" placeholder="Sexo" @bind-value="pessoa.Sexo" /></div>
 
         </div>
         <div class="checkbox-container">
-            <input class="checkbox" type="checkbox" id="age" />
+            <input class="checkbox" type="checkbox" id="age" @bind-value="pessoa.Maior65" />
             <label class="checkbox-label" for="age"> Eu tenho 65 anos ou mais</label><br>
         </div>
         <div>
@@ -27,11 +27,6 @@
 </main>
 
 @code {
-
-    [Parameter]  public double Altura { get; set; }
-    [Parameter]  public double Peso { get; set; }
-    [Parameter] public string Sexo { get; set; }
-    [Parameter] public bool Idade { get; set; }
 
     [Parameter] public pessoa pessoa { get; set; }
     [Parameter]
