@@ -4,11 +4,17 @@ namespace IMC.Model
 {
     public class CalcIMC
     {
-        public DateTime DataResultado { get; set; }
-        public double ValorIMC { get; set; }
-        public ImcStatus Status { get; set; }
+        private DateTime dataResultado;
+        private double ValorIMC;
+        private ImcStatus status;
 
-        public void CalculoDoIMC(pessoa pessoa)
+
+        public ImcStatus GetStatus() => status;
+
+        public DateTime GetDataResultado() => dataResultado;
+
+
+        public void CalculoDoIMC(Pessoa pessoa)
         {
             ValorIMC = pessoa.Peso / (pessoa.Altura * pessoa.Altura);
 
@@ -28,25 +34,25 @@ namespace IMC.Model
         private void ValidarImc()
         {
             if (ValorIMC <= 18.5)
-                Status = ImcStatus.Magro;
+                status = ImcStatus.Magro;
             else if (ValorIMC < 25)
-                Status = ImcStatus.Normal;
+                status = ImcStatus.Normal;
             else
-                Status = ImcStatus.Sobrepeso;
+                status = ImcStatus.Sobrepeso;
         }
 
         private void ValidarImcIdoso()
         {
             if (ValorIMC <= 18.5)
-                Status = ImcStatus.Magro;
+                status = ImcStatus.Magro;
             else if (ValorIMC <= 24.9)
-                Status = ImcStatus.Normal;
+                status = ImcStatus.Normal;
             else if (ValorIMC < 29)
-                Status = ImcStatus.Sobrepeso;
+                status = ImcStatus.Sobrepeso;
             else if (ValorIMC < 39.9)
-                Status = ImcStatus.Obesidade;
+                status = ImcStatus.Obesidade;
             else
-                Status = ImcStatus.Obesidade_Grave;
+                status = ImcStatus.Obesidade_Grave;
         }
 
         private void TratarIMCNegativo()

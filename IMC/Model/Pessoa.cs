@@ -1,6 +1,6 @@
 ﻿namespace IMC.Model
 {
-    public class pessoa
+    public struct Pessoa
     {
         public double Altura { get; set; }
         public double Peso { get; set; }

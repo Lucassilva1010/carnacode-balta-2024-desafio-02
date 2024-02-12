@@ -10,7 +10,7 @@
 </Cal_IMC>
 
 @code {
-    private pessoa _pessoa = new pessoa();
+    private Pessoa _pessoa = new Pessoa();
 
 
     private List<CalcIMC> _history = new();
@@ -23,11 +23,11 @@
         _history = imcResultRepository.Get();
     }
 
-    private void CalcularIM(pessoa p)
+    private void CalcularIM(Pessoa pessoa)
     {
 
         var imcResultRepository = new ImcRepositorio(LocalStorage);
-        imcResultRepository.Create(p);
+        imcResultRepository.Create(pessoa);
         var history = imcResultRepository.Get();
         Console.WriteLine();
         
