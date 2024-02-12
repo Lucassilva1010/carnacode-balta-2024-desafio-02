@@ -30,7 +30,7 @@ namespace IMC.Repositorio
 
             var imcCal  = new CalcIMC();
 
-            imcCal.DataResultado = DateTime.Now;
+            imcCal.SetDataResultado(DateTime.Now);
             imcCal.CalculoDoIMC(pessoa);
            
             _localStorage.SetItem(key, imcCal);

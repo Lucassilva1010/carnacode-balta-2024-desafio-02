@@ -25,9 +25,9 @@
                             <div class="icon-cell"></div>
                         </td>
                         <td class="table-data">
-                            <div class="textTitle">@imcResult.Status </div>
-                            <div class="textDate">@imcResult.ValorIMC</div>
-                            <div class="textDate">@imcResult.DataResultado</div>
+                            <div class="textTitle">@imcResult.GetStatus() </div>
+                            <div class="textDate">@imcResult.GetValorIMC()</div>
+                            <div class="textDate">@imcResult.GetDataResultado()</div>
                         </td>
                     </tr>
                 }
