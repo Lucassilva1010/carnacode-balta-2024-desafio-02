@@ -1,0 +1,35 @@
+﻿@page "/"
+@using IMC.Model
+@using IMC.Repositorio
+
+@inject ILocalStorageService LocalStorage
+
+<Cal_IMC pessoa="_pessoa" CalcularIMC="CalcularIM"> 
+
+
+</Cal_IMC>
+
+@code {
+    private pessoa _pessoa = new pessoa();
+
+
+    private List<CalcIMC> _history = new();
+
+    protected override void OnInitialized()
+    {
+       // _pessoa.Peso = 100;
+        var imcResultRepository = new ImcRepositorio(LocalStorage);
+
+        _history = imcResultRepository.Get();
+    }
+
+    private void CalcularIM(pessoa p)
+    {
+
+        var imcResultRepository = new ImcRepositorio(LocalStorage);
+        imcResultRepository.Create(p);
+        var history = imcResultRepository.Get();
+        Console.WriteLine();
+        
+    }
+}
