@@ -15,10 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Img\assets\app.fig" />
-    <Content Include="Img\assets\icon-no-bg.png" />
-    <Content Include="Img\assets\icon.png" />
-    <Content Include="Img\assets\texto-para-publicacao-nas-redes-sociais.txt" />
+    <Content Include="Assets\assets\texto-para-publicacao-nas-redes-sociais.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +26,16 @@
 
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\app.fig" />
+    <None Include="wwwroot\icon-no-bg.png" />
+    <None Include="wwwroot\icon.png" />
   </ItemGroup>
 
 </Project>

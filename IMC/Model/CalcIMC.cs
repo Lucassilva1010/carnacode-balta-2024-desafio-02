@@ -8,7 +8,9 @@ namespace IMC.Model
         private double _valorIMC;
         private ImcStatus _status;
 
-        public double GetValorIMC() => _valorIMC;
+        public DateTime DataResultado { get; set; }
+        public double ValorIMC { get; set; }
+        public ImcStatus Status { get; set; }
 
         public ImcStatus GetStatus() => _status;
 

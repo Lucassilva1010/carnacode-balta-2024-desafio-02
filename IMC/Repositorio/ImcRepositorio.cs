@@ -13,7 +13,7 @@ namespace IMC.Repositorio
         public List<CalcIMC> Get()
         {
             var result = new List<CalcIMC>();
-            for (var i = 0; i < _localStorage.Length; i++)
+            for (var i = _localStorage.Length;  i >=0;  i--)
             {
                 var key = (i + 1).ToString();
                 var item = _localStorage.GetItem<CalcIMC>(key);

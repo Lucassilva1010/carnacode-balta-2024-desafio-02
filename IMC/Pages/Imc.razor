@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using IMC.Model
 @using IMC.Repositorio
+@inject NavigationManager navi;
 
 @inject ILocalStorageService LocalStorage
 
@@ -17,7 +18,7 @@
 
     protected override void OnInitialized()
     {
-       // _pessoa.Peso = 100;
+        // _pessoa.Peso = 100;
         var imcResultRepository = new ImcRepositorio(LocalStorage);
 
         _history = imcResultRepository.Get();
@@ -28,6 +29,11 @@
         var imcResultRepository = new ImcRepositorio(LocalStorage);
         imcResultRepository.Create(pessoa);
         var history = imcResultRepository.Get();
+<<<<<<< HEAD
         Console.WriteLine();
+=======
+        navi.NavigateTo("/history");
+
+>>>>>>> 142c3f911db911e1e79e5dac255138e41f43fe6f
     }
 }
