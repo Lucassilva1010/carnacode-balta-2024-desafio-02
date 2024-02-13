@@ -8,7 +8,7 @@ namespace IMC.Model
     {
 
         public DateTime DataResultado { get; set; }
-        public double ValorIMC { get; set; }
+        public double? ValorIMC { get; set; }
         public ImcStatus Status { get; set; }
 
         //Metodos
