@@ -23,13 +23,11 @@
         _history = imcResultRepository.Get();
     }
 
-    private void CalcularIM(Pessoa pessoa)
+    public async Task CalcularIM(Pessoa pessoa)
     {
-
         var imcResultRepository = new ImcRepositorio(LocalStorage);
         imcResultRepository.Create(pessoa);
         var history = imcResultRepository.Get();
         Console.WriteLine();
-        
     }
 }

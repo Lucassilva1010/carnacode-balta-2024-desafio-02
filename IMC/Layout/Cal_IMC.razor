@@ -18,7 +18,7 @@
             <label class="checkbox-label" for="age"> Eu tenho 65 anos ou mais</label><br>
         </div>
         <div>
-            <button class="button-primary" type="button" onclick="@(()=>CalcularIMC.InvokeAsync(pessoa))">Calcular meu IMC</button>
+            <button class="button-primary" type="button" onclick="@(async()=> await CalcularIMC.InvokeAsync(pessoa))">Calcular meu IMC</button>
         </div>
         <div>
             <button class="button-secondary white-background">Entender o Cálculo</button>
@@ -27,7 +27,9 @@
 </main>
 
 @code {
-    [Parameter] public Pessoa pessoa { get; set; }
+    [Parameter] 
+    public Pessoa pessoa { get; set; }
+
     [Parameter]
     public EventCallback<Pessoa> CalcularIMC { get; set; }
 
