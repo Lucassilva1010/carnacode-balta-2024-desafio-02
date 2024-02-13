@@ -15,7 +15,7 @@ Neste segundo desafio, desenvolvemos uma aplicação completa para calcular o IM
 * Blazor
 
 ### Ferramentas Utilizadas
-* <<visual studio community 2022>>
+* visual studio community 2022
 
 # Recompensa
 <img src="https://baltaio.blob.core.windows.net/temp/carnacode-badge-desafio-02.png" alt="CarnaCode 2024 - Segundo Desafio Completo" width="256" />
